@@ -1,0 +1,12 @@
+<%= turbo_frame_tag book do %>
+  <%# レイアウトをモーダル用に整える %>
+  <%# turbo:submit-end（Turboのsubmit後）イベント発火時に、modal#close（モーダルを閉じる）を実行する %>
+  <%= bootstrap_form_with(model: book, data: { action: "turbo:submit-end->modal#close" }) do |form| %>
+    <%= form.text_field :name %>
+    <%= form.text_field :author %>
+    <%= form.collection_select :category_id, Category.all, :id, :name, {include_blank: "Please chose"} %>
+    <%= form.collection_select :section_id, Section.all, :id, :name, {include_blank: "Please chose"} %>
+    <%# <%= form.file_field :book_image_path, name:"book_image_path", id:"book_image_path" %> 
+    <%= form.primary %>
+  <% end%>
+<% end %>

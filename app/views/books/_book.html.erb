@@ -1,0 +1,22 @@
+<%= turbo_frame_tag book do %>
+  <div class="row py-2 border-top ml-0 mr-0">
+    <div class="col">
+      <div><%= book.name %></div>
+    </div>
+    <div class="col">
+      <div><%= book&.category&.name %></div>
+    </div>
+    <div class="col">
+      <div><%= book.section&.name %></div>
+    </div>
+    <div class="col">
+      <div><%= book.author %></div>
+    </div>
+    <div class="col">
+      <div class="fw-semibold">Takaya Saito</div>
+    </div>
+    <div class="col">
+      <div class="small text-medium-emphasis"><span>☆☆☆☆☆</span> 245</div>
+    </div>
+  </div>
+<% end %>

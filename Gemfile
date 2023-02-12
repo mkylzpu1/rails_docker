@@ -70,3 +70,13 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+
+gem 'devise'
+gem 'bootstrap', '~> 4.1.1'
+gem 'jquery-rails'
+gem 'mini_racer'
+gem "sassc-rails"
+gem "bootstrap_form"
+gem "aws-sdk-s3", require: false
+gem 'rubyzip'
+gem 'dotenv-rails'
