@@ -5,6 +5,7 @@ class Book < ApplicationRecord
   belongs_to :category
   belongs_to :section
   has_many :uesrs, through: :like_for_books
+  has_many :book_times
 
   validates :name, presence: true
   validates :user_id, presence: true

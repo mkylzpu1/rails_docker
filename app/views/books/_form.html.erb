@@ -6,7 +6,7 @@
     <%= form.text_field :author %>
     <%= form.collection_select :category_id, Category.all, :id, :name, {include_blank: "Please chose"} %>
     <%= form.collection_select :section_id, Section.all, :id, :name, {include_blank: "Please chose"} %>
-    <%# <%= form.file_field :book_image_path, name:"book_image_path", id:"book_image_path" %> 
+    <%# <%= form.file_field :book_image_path, name:"book_image_path", id:"book_image_path" %>
     <%= form.primary %>
   <% end%>
 <% end %>
