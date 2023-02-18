@@ -1,7 +1,7 @@
 <%= turbo_frame_tag book do %>
   <div class="row py-2 border-top ml-0 mr-0">
     <div class="col">
-      <div><%= book.name %></div>
+      <div><%= link_to book.name, book_path(book) %></div>
     </div>
     <div class="col">
       <div><%= book&.category&.name %></div>
