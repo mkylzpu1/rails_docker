@@ -4,8 +4,11 @@ class BooksController < ApplicationController
   require 'aws-sdk-s3'
   # require './app/logic/test'
 
+  before_action :set_book, only: [:show, :edit]
+
   def index
     @books = Book.all()
+    @book_times = BookTime.all()
   end
 
   def new
@@ -23,14 +26,8 @@ class BooksController < ApplicationController
     end
   end
 
-  def test
-    client = Aws.client()
-
-    image = params[:book_image_path]
-    logger.debug(image.read)
-    logger.debug("^^^^^^^^-----")
-
-    client.put_object(bucket: ENV['AWS_BUCKET'], key: "test/auo/test", body: image.read)
+  def show
+    @book_times = BookTime.where(book_id: params[:id])
   end
 
   private
@@ -51,5 +48,9 @@ class BooksController < ApplicationController
     def put_object(path,image)
       client = clientMake().client
       client.put_object(bucket: ENV['AWS_BUCKET'], key: "#{path}/#{image.original_filename}", body: image.read)
+    end
+
+    def set_book
+      @book = Book.find_by(id: params[:id])
     end
 end

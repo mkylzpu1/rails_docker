@@ -1,0 +1,12 @@
+<%= turbo_frame_tag book_time do %>
+  <%# レイアウトをモーダル用に整える %>
+  <%# turbo:submit-end（Turboのsubmit後）イベント発火時に、modal#close（モーダルを閉じる）を実行する %>
+  <%= bootstrap_form_with(model: book_time, data: { action: "turbo:submit-end->modal#close" }, locals: {booke_id: @book_id}) do |form| %>
+    <%= form.number_field :day %>
+    <%= form.number_field :hour %>
+    <%= form.number_field :minute %>
+    <%= form.number_field :second %>
+    <%= form.hidden_field :book_id, value: @book_id %>
+    <%= form.primary %>
+  <% end%>
+<% end %>

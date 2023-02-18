@@ -1,0 +1,17 @@
+<%= turbo_frame_tag book_time do %>
+  <div class="row py-2 border-top ml-0 mr-0">
+    <div class="col">
+      <div><%= link_to book_time.book.name, book_path(book_time) %></div>
+    </div>
+    <div class="col">
+      <div><%= book_time.user&.email %></div>
+    </div>
+    <div class="col">
+      <div><%= "#{book_time.day}日#{book_time.hour}時間#{book_time.minute}分#{book_time.second}秒" %></div>
+    </div>
+  </div>
+<% end %>
+
+
+<%# タイム記録を表示するところで終わってるよ %>
+<%# render部分の変数がうまく渡っていない %>
