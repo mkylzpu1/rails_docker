@@ -1,0 +1,54 @@
+{
+  "data": [
+    {
+      "title": "C#クックブック ―プロフェッショナル開発者のためのモダンレシピ",
+      "author": "Joe Mayo",
+      "price": 3960
+    },
+    {
+      "title": "詳解 システム・パフォーマンス 第2版",
+      "author": "Brendan Gregg",
+      "price": 6600
+    },
+    {
+      "title": "オブザーバビリティ・エンジニアリング",
+      "author": "Charity Majors、Liz Fong-Jones、George Miranda",
+      "price": 3960
+    },
+    {
+      "title": "リーダーの作法",
+      "author": "Michael Lopp",
+      "price": 1936
+    },
+    {
+      "title": "UXデザインの法則",
+      "author": "Jon Yablonski",
+      "price": 1584
+    },
+    {
+      "title": "入門 Python 3 第2版",
+      "author": "Bill Lubanovic",
+      "price": 3344
+    },
+    {
+      "title": "マスタリングLinuxシェルスクリプト 第2版",
+      "author": "Mokhtar Ebrahim、Andrew Mallett",
+      "price": 2640
+    },
+    {
+      "title": "Lean UX 第3版",
+      "author": "Jeff Gothelf、Josh Seiden",
+      "price": 2376
+    },
+    {
+      "title": "UX戦略 第2版",
+      "author": "Jaime Levy",
+      "price": 2640
+    },
+    {
+      "title": "戦略的UXライティング",
+      "author": "Torrey Podmajersky",
+      "price": 2024
+    }
+  ]
+}

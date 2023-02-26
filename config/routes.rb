@@ -13,7 +13,7 @@ Rails.application.routes.draw do
     }
     devise_scope :user do
       root to: 'users/registrations#new'
-      resources :dashboard, :books, :book_times
+      resources :dashboard, :books, :book_times, :marksheets
       post '/test', to: 'books#test', as: :test
     end
 

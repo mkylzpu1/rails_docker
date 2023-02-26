@@ -19,5 +19,7 @@ module App
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+    config.load_defaults 5.2
+    config.paths.add 'lib', eager_load: true # 追加
   end
 end
