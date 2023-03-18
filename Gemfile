@@ -71,6 +71,12 @@ group :test do
   gem "webdrivers"
 end
 
+
+group :development, :test do
+  gem "rspec-rails"
+  gem "factory_bot_rails"
+end
+
 gem 'devise'
 gem 'bootstrap', '~> 4.1.1'
 gem 'jquery-rails'
@@ -80,3 +86,4 @@ gem "bootstrap_form"
 gem "aws-sdk-s3", require: false
 gem 'rubyzip'
 gem 'dotenv-rails'
+gem 'rails-i18n', '~> 7.0.0'

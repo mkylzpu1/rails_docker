@@ -21,7 +21,10 @@ class Users::PasswordsController < Devise::PasswordsController
   #   super
   # end
 
-  # protected
+  def reset_confirm
+  end
+
+  protected
 
   # def after_resetting_password_path_for(resource)
   #   super(resource)
@@ -31,4 +34,9 @@ class Users::PasswordsController < Devise::PasswordsController
   # def after_sending_reset_password_instructions_path_for(resource_name)
   #   super(resource_name)
   # end
+
+  def after_sending_reset_password_instructions_path_for(resource_name)
+    # リダイレクト先を指定
+    reset_confirm_path
+  end
 end
