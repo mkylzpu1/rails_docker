@@ -13603,4 +13603,12 @@ html:not([dir=rtl]) .wrapper {
   margin-bottom: 0.5rem;
 }
 
+.split_word {
+  display: none;
+}
+
+.split_flag:checked ~ .split_word {
+  display: block;
+}
+
 /*# sourceMappingURL=style.css.map */

@@ -27,6 +27,7 @@
         <li class="nav-title">Theme</li>
         <li class="nav-item"><%= link_to 'Books', books_path, class: 'nav-link' %></li>
         <li class="nav-item"><%= link_to 'Show', book_path(1), class: 'nav-link' %></li>
+        <li class="nav-item"><%= link_to 'FilrUpload', words_path, class: 'nav-link' %></li>
         <li class="nav-item"><a class="nav-link" href="typography.html">
             <svg class="nav-icon">
               <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-pencil"></use>
@@ -252,10 +253,6 @@
       <div class="body flex-grow-1 px-3">
         <%= yield %>
       </div>
-      <footer class="footer">
-        <div><a href="https://coreui.io">CoreUI </a><a href="https://coreui.io">Bootstrap Admin Template</a> © 2022 creativeLabs.</div>
-        <div class="ms-auto">Powered by&nbsp;<a href="https://coreui.io/docs/">CoreUI UI Components</a></div>
-      </footer>
     </div>
 
    <%# 編集・登録リンクのTurbo Framesのターゲット %>
