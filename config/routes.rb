@@ -2,6 +2,12 @@ Rails.application.routes.draw do
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
+
+  # ファイル変換
+  get 'words/index', as: :words
+  post 'words/upload', as: :word_upload
+  get 'words/complete', as: :word_complete
+  
   # root "articles#index"
     # rootをログイン画面に設定
     devise_for :users, controllers: {

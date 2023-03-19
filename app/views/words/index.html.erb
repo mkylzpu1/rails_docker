@@ -1,0 +1,31 @@
+<%= form_with url: word_upload_path do |f| %>
+    <div class="bg-light min-vh-100 d-flex flex-row align-items-center">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-6">
+            <div class="card mb-4 mx-4">
+              <div class="card-body p-4">
+                <h1>ファイル変換</h1>
+                <p class="text-medium-emphasis">Create your account</p>
+
+                <div class="input-group mb-3">
+                   自動翻訳
+                   <%= f.check_box :trans_flag %>
+                </div>
+                <div class="input-group mb-3">
+                   単語分割機能必要か
+                   <%= f.check_box :split_flag, class: "split_flag" %>
+                   <%= f.text_field :split_word, class: "form-control split_word", placeholder: "「=」「,」「/」等" %>
+                </div>
+                <div class="mb-3">
+                  <%= f.file_field :file, class: "form-control" %>
+                </div>
+
+                <%= f.submit "Upload", class: "btn btn-block btn-success" %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+<% end %>
